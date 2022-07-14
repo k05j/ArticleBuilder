@@ -1,0 +1,21 @@
+.addBtn {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.07);
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.addBtn:hover {
+    background-color: rgba(0, 0, 0, 0.125);
+    color: black;
+}
+.addBtn:active {
+    color: black;
+}

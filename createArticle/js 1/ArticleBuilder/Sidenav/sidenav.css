@@ -1,0 +1,192 @@
+.sidenav {
+    background-color: #34383c;
+    width: var(--nav-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.sidenav-toolbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 125px));
+    gap: 1rem;
+    justify-content: center;
+}
+.sidenav-toolbar--article {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    grid-template-columns: none;
+    gap: 1rem;
+    overflow-y: auto;
+    justify-content: start;
+}
+.sidenav-toolbox {
+    position: relative;
+    display: flex;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    width: 125px;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: grab;
+    background-color: #404349;
+    flex-direction: column;
+}
+.sidenav-toolbox:hover {
+    color: rgba(139, 251, 255, 0.85);
+    box-shadow: 1px 0.5px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: box-shadow .15s ease-in-out;
+}
+.sidenav-toolbox:hover .toolbox-tooltip {
+    visibility: visible;
+}
+.resizeable {
+    resize: both;
+    overflow: auto;
+}
+.sidenav-toolHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    height: 50px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+}
+.toolHeader-header {
+    color: white;
+    align-self: center;
+    margin: 0;
+}
+.toolHeader-settingsBtn {
+    background-color: #404349; 
+}
+.toolHeader-settingsBtn:hover {
+    color: white;
+    background-color: #3a3c42;
+}
+.toolheader-extendBtn {
+    background-color: #267dff;
+    
+    transform: rotate(0deg);
+    transition: transform .7s ease-in-out;  
+}
+.toolheader-extendBtn:hover {
+    color:  white;
+    background-color: #2473e9;
+
+}
+.toolheader-extendBtn, .toolHeader-settingsBtn, .extendbar-closeBtn {
+    color: white;
+    transition: background .2s ease-in-out;
+    border: none;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    align-self: center;
+    text-align: center;
+}
+.sidenav-extendbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 50px;
+    background-color: #27282c;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 1);
+    transition: width .2s ease-in-out;
+    margin-right: var(--nav-width);
+    padding: 0;
+    z-index: 99;
+}
+.sidenav-extendbar--open {
+    width: 100%;
+}
+.sidenav--open .toolheader-extendBtn {
+    transform: rotate(180deg);
+}
+.extendbar-container {
+    display: none;
+    margin-left: var(--nav-width);
+    height: inherit;
+    flex-direction: row;
+    align-items: center;
+}
+.sidenav-extendbar--open .extendbar-container {
+    display: flex;
+}
+.extendbar-closeBtn {
+    background-color: inherit;
+}
+.toolbox-icon {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toolbox-icon svg {
+    width: 20px;
+    height: 20px;   
+}
+.dragging {
+    cursor: grabbing;
+}
+.backBtn {
+    border: 0;
+    border-radius: 6px;
+    background-color: rgb(255, 37, 37);
+    color: white;
+    transition: all .25s ease-in-out;
+    margin: 0 .5rem;
+}
+.backBtn:hover {
+    background-color: rgb(221, 29, 29);
+}
+.previewArticle {
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    background-color: #404349;
+    color: white;
+    transition: all .25s ease-in-out;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #404349;
+    margin: 0 .5rem;
+}
+.previewArticle header {
+    padding: 10px 10px;
+    border-bottom: 1px solid #616161;
+}
+.previewArticle header span {
+    white-space: nowrap;
+    width: 95%;
+    overflow: hidden;              /* "overflow"-Wert darf nicht "visible" sein */
+    text-overflow: ellipsis;
+}
+.previewArticle div {
+    padding: 5px 10px;
+}
+.previewArticle:hover {
+    color: rgba(139, 251, 255, 0.85);
+    box-shadow: 1px 0.5px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: box-shadow .15s ease-in-out;
+}
+
+.extendbar-showArticle {
+    border: 0;
+    background-color: #267dff;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 7px;
+}
+.extendbar-showArticle:hover {
+    background-color: #2473e9;
+}

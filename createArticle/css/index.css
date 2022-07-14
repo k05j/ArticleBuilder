@@ -1,0 +1,56 @@
+:root {
+    --nav-width: 280px;
+}
+body {
+    margin: 0 var(--nav-width) 0 0;
+}
+.head {
+    background-color: #eeeeee;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 3px solid #222222;
+}
+
+#app {
+    padding: 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+.article-dropzone {
+    height: 10px;
+    transition: background 0.15s, height 0.15s;
+}
+.article-dropzone-active {
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.editbox-delBtn, .editbox-moveDownBtn, .editbox-moveUpBtn {
+    border: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background: transparent;
+    transition: background .5s ease-in-out;
+}
+.editbox-delBtn {
+    background: #e21f1f;
+}
+.editbox-delBtn svg, .editbox-moveDownBtn svg, .editbox-moveUpBtn svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+.editbox-moveUpBtn {
+    margin: 0 .5rem;
+    background: #727272;
+}
+.editbox-moveDownBtn {
+    background: #727272;
+}
+.editbox-delBtn:hover {
+    background: #c72020;
+}
+.editbox-moveDownBtn:hover, .editbox-moveUpBtn:hover {
+    background: #494949;
+}
